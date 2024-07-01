@@ -1,6 +1,6 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/9hj07t7ojh6n59mh?svg=true)](https://ci.appveyor.com/project/JulieSoboleva/Animation)
 
-[WEB Version:](https://juliesoboleva.github.io/Animation/)
+[WEB Version](https://juliesoboleva.github.io/Animation/)
 
 ### Collapse
 
