@@ -1,4 +1,4 @@
-import { container } from './template';
+import { container } from "./template";
 
 export default class Widget {
   constructor() {
@@ -8,22 +8,22 @@ export default class Widget {
   render() {
     document.body.append(container());
 
-    this.collapsible = document.querySelector('.collapsible');
+    this.collapsible = document.querySelector(".collapsible");
 
-    document.querySelector('.btn').addEventListener(
-      'click',
+    document.querySelector(".btn").addEventListener(
+      "click",
       (event) => {
         event.preventDefault();
         this.toggleElement(this.collapsible);
       },
-      false
+      false,
     );
 
     document.addEventListener(
-      'click',
+      "click",
       (event) => {
         event.preventDefault();
-        if (event.target !== document.querySelector('.btn')) {
+        if (event.target !== document.querySelector(".btn")) {
           try {
             this.closeElement();
           } catch (e) {
@@ -31,23 +31,23 @@ export default class Widget {
           }
         }
       },
-      false
+      false,
     );
   }
 
   toggleElement(element) {
-    if (!element.style.height || element.style.height === '0px') {
+    if (!element.style.height || element.style.height === "0px") {
       element.style.height = `${Array.prototype.reduce.call(
         element.childNodes,
         (p, c) => p + (c.offsetHeight || 0),
-        0
+        0,
       )}px`;
     } else {
-      element.style.height = '0px';
+      element.style.height = "0px";
     }
   }
 
   closeElement() {
-    this.collapsible.style.height = '0px';
+    this.collapsible.style.height = "0px";
   }
 }

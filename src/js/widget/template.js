@@ -1,6 +1,6 @@
 function container() {
-  const newContainer = document.createElement('div');
-  newContainer.classList.add('wrapper');
+  const newContainer = document.createElement("div");
+  newContainer.classList.add("wrapper");
   newContainer.innerHTML = `
   <div class="container">
     <div class="container__header">
